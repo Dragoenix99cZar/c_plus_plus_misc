@@ -2,12 +2,19 @@
 // https://www.geeksforgeeks.org/expression-evaluation/
 
 // CPP program to evaluate a given
-// expression where tokens are 
+// expression where tokens are
 // separated by space.
 #include <bits/stdc++.h>
 #include <cassert>
 #include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
+// #include <iostream>
+// #include <vector>
+// #include <string>
+// #include <algorithm>
+
+// #include "bits-stdc++.h"
 // using namespace std;
 
 int precedence(char op) {
@@ -104,7 +111,7 @@ void testEvaluate() {
     assert(abs(evaluate("2.5 * 4") - 10.0) < 1e-6);
     assert(abs(evaluate("1.0 + 2.0 * 3.0 - 4.0 / 2.0") - 5.0) < 1e-6);
     assert(abs(evaluate("(5 + 3) * 2.5 - 10 / 2") - 15.0) < 1e-6);
-    
+
     std::cout << "All tests passed!" << std::endl;
 }
 

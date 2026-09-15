@@ -1,5 +1,8 @@
 // g++ -o percep perceptron.cpp
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
 #include <cstdlib>
 #include <ctime>
 

@@ -134,6 +134,11 @@ void stats(const Vector& vec){
     std::cout << "\n--------------------------\n";
 }
 
+void stats(const char* msg, const Vector& vec){
+    std::cout << "\n--------- " << msg << " -----------------";
+    stats(vec);
+}
+
 int main() {
     Vector vec = {0};
 
@@ -146,7 +151,7 @@ int main() {
     for (int i = 1; i <= 48; i += 1) {
         add(vec, i * 3);
     }
-    stats(vec);
+    stats("Add 48 elements added", vec);
     // 2. Read element at 2D coordinate (row 1, col 2) for shape {4, 6}
     std::cout << "2D Read (1, 2) in {4, 6}: " << read_nd(vec, {1, 2}, {4, 6}) << "\n\n";
 
@@ -165,8 +170,7 @@ int main() {
 
     // 4. Extend Vector
     Vector extra;
-    std::cout << "Vector extra;";
-    stats(extra);
+    stats("Vector extra;", extra);
     add(extra, 99);
     std::cout << "add(extra, 99);";
     stats(extra);
